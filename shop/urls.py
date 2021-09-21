@@ -23,7 +23,11 @@ from rest_framework import routers
 
 
 router = routers.DefaultRouter()
-router.register(r'users', ComanyModelViewSet)
+router.register(r'companies', ComanyModelViewSet,basename="companies")
+
+
+
+
 urlpatterns = [
     path('', include(router.urls)),
     path('admin/', admin.site.urls),
